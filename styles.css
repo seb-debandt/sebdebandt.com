@@ -1,0 +1,135 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-muted: #555555;
+  --color-border: #e0e0e0;
+  --font-sans: 'Georgia', serif;
+  --font-mono: 'Courier New', monospace;
+  --max-width: 640px;
+  --spacing: 2rem;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem var(--spacing);
+}
+
+main {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Header */
+header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  min-height: 1.4em;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2.5rem;
+}
+
+section p {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Links section */
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.links a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease;
+}
+
+.links a:hover {
+  opacity: 0.45;
+}
+
+/* Contact */
+.contact a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease;
+}
+
+.contact a:hover {
+  opacity: 0.45;
+}
+
+/* Footer */
+footer {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--color-muted);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 2.5rem 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
