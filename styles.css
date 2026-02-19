@@ -78,6 +78,43 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
+/* Background & Interests lists */
+.background ul,
+.interests ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.background li,
+.interests li {
+  padding-left: 1rem;
+  position: relative;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.background li::before,
+.interests li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-muted);
+}
+
+.background a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease;
+}
+
+.background a:hover {
+  opacity: 0.45;
+}
+
 /* Links section */
 .links ul {
   list-style: none;
